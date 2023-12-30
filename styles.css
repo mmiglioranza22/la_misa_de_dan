@@ -1,15 +1,26 @@
 @import url(normalize.css);
 
 * {
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 :root {
   --raisin-black: #252323;
+  --pitch-black: #000;
 }
 body {
   font-family: "Poppins", sans-serif;
-  background: radial-gradient(circle at top, #e3e3d9, #888575);
+  background-color: var(--pitch-black);
   color: white;
+  min-width: 100%;
+  min-height: 100%;
+}
+.img-bg {
+  width: -webkit-fill-available;
+}
+
+.img-container {
+  box-shadow: inset 0px 0px 0px 0px #fff;
+  width: fit-content;
 }
 
 @media (max-width: 1000px) {
