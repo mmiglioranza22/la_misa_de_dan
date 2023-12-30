@@ -30,6 +30,14 @@ nav {
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.6320903361344538) 20%,
+    rgba(0, 0, 0, 0.7413340336134453) 29%,
+    rgba(0, 0, 0, 1) 48%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 svg {
   cursor: pointer;
@@ -45,7 +53,7 @@ svg:hover {
   align-items: center;
 }
 .nav-left {
-  padding-left: 60px;
+  padding-left: 30px;
 }
 .nav-right {
   padding-right: 60px;
@@ -67,9 +75,6 @@ svg:hover {
   align-items: center;
   gap: 30px;
   padding-left: 20px;
-}
-#trolo:hover {
-  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
 }
 .channels-mono > svg:hover {
   cursor: pointer;
