@@ -1,4 +1,8 @@
 @import url(normalize.css);
+@font-face {
+  font-family: "custom";
+  src: url("/assets/fonts/constantine/Constantine.ttf") format("truetype");
+}
 
 * {
   overflow-x: hidden;
@@ -8,19 +12,143 @@
   --pitch-black: #000;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "custom", "Times New Roman", sans-serif;
+  font-size: 20px;
   background-color: var(--pitch-black);
   color: white;
   min-width: 100%;
   min-height: 100%;
 }
+main {
+  display: flex;
+}
+nav {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+svg {
+  cursor: pointer;
+}
+
+svg:hover {
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.nav-left {
+  padding-left: 80px;
+}
+.nav-right {
+  padding-right: 80px;
+}
+.nav-logo {
+  width: 90px;
+  height: 90px;
+}
+.channels-mono {
+  display: flex;
+  gap: 20px;
+}
+.channels-mono:hover > svg {
+  cursor: pointer;
+  filter: drop-shadow(0px 0px 4px rgba(255, 255, 255, 1));
+}
 .img-bg {
   width: -webkit-fill-available;
 }
-
 .img-container {
-  box-shadow: inset 0px 0px 0px 0px #fff;
   width: fit-content;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* border: 1px solid red; */
+  width: 100vw;
+  height: 100vh;
+}
+.logo {
+  width: 400px;
+  height: 400px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 80px 20px #fff;
+  overflow: hidden;
+  margin-block: 40px;
+}
+.column {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  min-width: 170px;
+}
+.left {
+  left: 12%;
+}
+.right {
+  right: 12%;
+}
+.media-column-position {
+  position: absolute;
+  bottom: 0;
+}
+.media-torch {
+  width: 170px;
+  position: absolute;
+  top: 35px;
+}
+.main-scroll {
+  position: absolute;
+  top: 0px;
+  /* margin-top: 100px; */
+  min-width: 50vw;
+  /* min-height: 100vh; */
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 80px;
+}
+.block {
+  text-align: center;
+  line-height: 55px;
+  padding-block: 40px;
+}
+.donations,
+.channels {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+  min-width: 600px;
+  /* gap: 60px; */
+}
+.donations {
+  min-width: 300px;
+}
+
+@media (max-width: 1600px) {
+  .media-torch {
+    width: 170px;
+    position: absolute;
+    top: 0px;
+  }
+  .media-column-position {
+    position: absolute;
+    bottom: -70px;
+  }
 }
 
 @media (max-width: 1000px) {
