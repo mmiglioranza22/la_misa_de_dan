@@ -1,0 +1,19 @@
+@import url(normalize.css);
+
+* {
+  /* overflow-x: hidden; */
+}
+:root {
+  --raisin-black: #252323;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #e3e3d9, #888575);
+  color: white;
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 767px) {
+}
