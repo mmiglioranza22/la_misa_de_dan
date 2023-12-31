@@ -354,4 +354,11 @@ footer {
     height: auto;
     gap: 20px;
   }
+  .main-scroll,
+  .dialog-main-scroll {
+    width: -webkit-fill-available;
+  }
+  .block {
+    padding-block: 20px;
+  }
 }
