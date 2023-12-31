@@ -19,13 +19,9 @@ function toogleNavOption(ev) {
 
   // if blur bg is opened and option is the same than current, close all.
   if (navOption === ev.target.id) {
-    // mistica.style.display = "none";
-    // comercial.style.display = "none";
-    // legal.style.display = "none";
     dialog.style.display = dialog.style.display == "none" ? "flex" : "none";
   } else {
     dialog.style.display = "flex";
-    console.log("entra", ev.target.id);
     // if blur bg is opened and option is different than current, leave blur opened and change option.
     // if blur bg is not opened, open blur with option selected.
     switch (ev.target.id) {
@@ -47,8 +43,6 @@ function toogleNavOption(ev) {
     }
     navOption = ev.target.id;
   }
-
-  console.log(ev.target.id, navOption);
 }
 
 function clickAway() {

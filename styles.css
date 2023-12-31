@@ -162,6 +162,8 @@ svg:hover {
   text-align: center;
   line-height: 55px;
   padding-block: 40px;
+  display: flex;
+  flex-direction: column;
 }
 .half {
   text-align: justify;
