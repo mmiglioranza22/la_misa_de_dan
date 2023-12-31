@@ -10,42 +10,42 @@ const comercial = document.getElementById("comercial");
 const legal = document.getElementById("legal");
 const dialog = document.getElementById("dialog");
 
-// toggle nav options
-// target all 3 options and blur background
-// if blur bg is opened and option is different than current, leave blur opened and change option.
-// if blur bg is opened and option is the same than current, close all.
-// if blur bg is not opened, open blur with option selected.
-
 function toogleNavOption(ev) {
+  // target all 3 options and blur background
   const mistica = document.getElementById("block-mistica");
   const comercial = document.getElementById("block-comercial");
   const legal = document.getElementById("block-legal");
   const dialog = document.getElementById("dialog");
 
+  // if blur bg is opened and option is the same than current, close all.
   if (navOption === ev.target.id) {
+    // mistica.style.display = "none";
+    // comercial.style.display = "none";
+    // legal.style.display = "none";
     dialog.style.display = dialog.style.display == "none" ? "flex" : "none";
-    return;
   } else {
-    navOption = ev.target.id;
-  }
-  if (dialog.style.display !== "none") {
+    dialog.style.display = "flex";
+    console.log("entra", ev.target.id);
+    // if blur bg is opened and option is different than current, leave blur opened and change option.
+    // if blur bg is not opened, open blur with option selected.
     switch (ev.target.id) {
       case "mistica":
+        mistica.style.display = "flex";
         comercial.style.display = "none";
         legal.style.display = "none";
-        mistica.style.display = "flex";
         break;
       case "comercial":
+        comercial.style.display = "flex";
         mistica.style.display = "none";
         legal.style.display = "none";
-        comercial.style.display = "flex";
         break;
       case "legal":
+        legal.style.display = "flex";
         comercial.style.display = "none";
         mistica.style.display = "none";
-        legal.style.display = "flex";
         break;
     }
+    navOption = ev.target.id;
   }
 
   console.log(ev.target.id, navOption);
