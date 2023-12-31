@@ -292,13 +292,32 @@ footer {
   .main-scroll {
     top: 120px;
   }
+
+  main {
+    display: block;
+  }
+  nav {
+    position: absolute;
+  }
+  .overlay {
+    position: static;
+  }
+  .main-scroll {
+    width: auto;
+  }
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 24px;
+  }
   .logo {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     display: flex;
+  }
+  .column {
+    display: none;
   }
 }
 @media (max-width: 566px) {
@@ -320,11 +339,8 @@ footer {
   }
   .overlay {
     position: static;
-    /* width: auto; */
   }
-  .column {
-    display: none;
-  }
+
   .main-scroll {
     width: auto;
     top: 360px;
