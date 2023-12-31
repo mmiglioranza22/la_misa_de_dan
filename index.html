@@ -29,10 +29,14 @@
     />
     <link rel="manifest" href="/assets/favicon_io/site.webmanifest" />
     <!-- JS -->
-    <script src="/index.js"></script>
+    <script src="/index.js" defer></script>
   </head>
   <body>
     <main>
+      <!-- bg -->
+      <div class="img-container">
+        <img class="img-bg" src="/assets/church_.png" alt="church entrance" />
+      </div>
       <!-- columns -->
       <div class="column left">
         <img class="media-torch" src="/assets/fire.gif" alt="" srcset="" />
@@ -52,11 +56,6 @@
           alt=""
           srcset=""
         />
-      </div>
-
-      <!-- bg -->
-      <div class="img-container">
-        <img class="img-bg" src="/assets/church_.png" alt="church entrance" />
       </div>
 
       <!-- Content -->
@@ -85,7 +84,6 @@
                 />
               </svg>
             </a>
-
             <a
               href="https://www.youtube.com/@LaMisaDeDan"
               target="_blank"
@@ -106,7 +104,6 @@
                 />
               </svg>
             </a>
-
             <a
               href="https://www.instagram.com/lamisadedan"
               target="_blank"
@@ -127,7 +124,6 @@
                 />
               </svg>
             </a>
-
             <a
               href="https://www.tiktok.com/@lamisadedan"
               target="_blank"
@@ -148,7 +144,6 @@
                 />
               </svg>
             </a>
-
             <a
               href="https://twitter.com/LaMisaDeDan"
               target="_blank"
@@ -172,11 +167,105 @@
           </div>
         </div>
         <div class="nav-right">
-          <p class="nav-option">Mística</p>
-          <p class="nav-option">Comercial</p>
-          <p class="nav-option">Legal</p>
+          <p class="nav-option" id="mistica">Mística</p>
+          <p class="nav-option" id="comercial">Comercial</p>
+          <p class="nav-option" id="legal">Legal</p>
         </div>
       </nav>
+      <!-- Toggle dialog -->
+      <div class="overlay-dialog" id="dialog">
+        <div class="dialog-main-scroll">
+          <div class="block half" id="block-mistica">
+            <h3>Mística</h3>
+            <!-- <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Architecto recusandae nobis delectus impedit ipsum hic at aut,
+              harum perspiciatis cupiditate quibusdam explicabo assumenda cumque
+              iusto deleniti deserunt temporibus labore? Quas?
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident praesentium sit. Molestiae architecto tempore nisi
+              numquam sapiente? Tempore ab fugiat possimus sit officia amet
+              aperiam voluptate expedita rem odio. Eum tenetur odio earum
+              dignissimos inventore eius aut cumque quam consequuntur pariatur
+              in error sunt ullam repellat, ipsa corporis velit fuga iusto enim?
+              A id provident, non laboriosam obcaecati reprehenderit! Fugit,
+              consequatur vitae magni nihil optio nisi accusantium, consequuntur
+              harum at dolorum obcaecati, repellat dolores earum architecto!
+              Error tempore omnis dolores modi expedita quo ad itaque, unde ut
+              perspiciatis similique. Expedita magnam fuga atque sit mollitia!
+              Eaque facilis a maxime dolore laudantium labore fugiat eum
+              corporis iste corrupti. Culpa dicta voluptates blanditiis!
+              Repudiandae, neque deleniti. Aspernatur est quae doloremque ab?
+              Error tempore modi aspernatur iure a molestiae voluptatem eos
+              voluptates praesentium saepe numquam quos quam magni minus autem
+              dolorem sint, consectetur, quibusdam deserunt omnis reprehenderit
+              dignissimos id. Provident, reiciendis explicabo.
+            </p> -->
+          </div>
+
+          <div class="block half" id="block-comercial">
+            <h3>Comercial</h3>
+            <!-- <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Architecto recusandae nobis delectus impedit ipsum hic at aut,
+              harum perspiciatis cupiditate quibusdam explicabo assumenda cumque
+              iusto deleniti deserunt temporibus labore? Quas?
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident praesentium sit. Molestiae architecto tempore nisi
+              numquam sapiente? Tempore ab fugiat possimus sit officia amet
+              aperiam voluptate expedita rem odio. Eum tenetur odio earum
+              dignissimos inventore eius aut cumque quam consequuntur pariatur
+              in error sunt ullam repellat, ipsa corporis velit fuga iusto enim?
+              A id provident, non laboriosam obcaecati reprehenderit! Fugit,
+              consequatur vitae magni nihil optio nisi accusantium, consequuntur
+              harum at dolorum obcaecati, repellat dolores earum architecto!
+              Error tempore omnis dolores modi expedita quo ad itaque, unde ut
+              perspiciatis similique. Expedita magnam fuga atque sit mollitia!
+              Eaque facilis a maxime dolore laudantium labore fugiat eum
+              corporis iste corrupti. Culpa dicta voluptates blanditiis!
+              Repudiandae, neque deleniti. Aspernatur est quae doloremque ab?
+              Error tempore modi aspernatur iure a molestiae voluptatem eos
+              voluptates praesentium saepe numquam quos quam magni minus autem
+              dolorem sint, consectetur, quibusdam deserunt omnis reprehenderit
+              dignissimos id. Provident, reiciendis explicabo.
+            </p> -->
+          </div>
+
+          <div class="block half" id="block-legal">
+            <h3>Legal</h3>
+            <!-- <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Architecto recusandae nobis delectus impedit ipsum hic at aut,
+              harum perspiciatis cupiditate quibusdam explicabo assumenda cumque
+              iusto deleniti deserunt temporibus labore? Quas?
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod
+              provident praesentium sit. Molestiae architecto tempore nisi
+              numquam sapiente? Tempore ab fugiat possimus sit officia amet
+              aperiam voluptate expedita rem odio. Eum tenetur odio earum
+              dignissimos inventore eius aut cumque quam consequuntur pariatur
+              in error sunt ullam repellat, ipsa corporis velit fuga iusto enim?
+              A id provident, non laboriosam obcaecati reprehenderit! Fugit,
+              consequatur vitae magni nihil optio nisi accusantium, consequuntur
+              harum at dolorum obcaecati, repellat dolores earum architecto!
+              Error tempore omnis dolores modi expedita quo ad itaque, unde ut
+              perspiciatis similique. Expedita magnam fuga atque sit mollitia!
+              Eaque facilis a maxime dolore laudantium labore fugiat eum
+              corporis iste corrupti. Culpa dicta voluptates blanditiis!
+              Repudiandae, neque deleniti. Aspernatur est quae doloremque ab?
+              Error tempore modi aspernatur iure a molestiae voluptatem eos
+              voluptates praesentium saepe numquam quos quam magni minus autem
+              dolorem sint, consectetur, quibusdam deserunt omnis reprehenderit
+              dignissimos id. Provident, reiciendis explicabo.
+            </p> -->
+          </div>
+        </div>
+      </div>
       <!-- overlay -->
       <div class="overlay">
         <!-- Main scroll -->
@@ -388,6 +477,7 @@
               </svg>
             </div>
           </div>
+
           <div class="block">
             <h1>
               Nuestros canales de
